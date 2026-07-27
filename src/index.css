@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-primary: #a73453;
+  --color-primary-dark: #871a3c;
+  --color-primary-container: #ef6b8a;
+  --color-on-primary-container: #640026;
+  
+  --color-secondary: #6c49b3;
+  --color-secondary-container: #b390ff;
+  
+  --color-tertiary: #006c4c;
+  --color-tertiary-container: #34a97d;
+  
+  --color-surface-bg: #fff7f9;
+  --color-surface-low: #ffeff9;
+  --color-surface-mid: #ffe7f8;
+  --color-surface-high: #f9e1f2;
+  --color-surface-highest: #f4dced;
+  
+  --color-text-main: #251723;
+  --color-text-muted: #564145;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fff7f9;
+  color: #251723;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode theme overrides */
+.dark body {
+  background-color: #170d16;
+  color: #fce8f3;
+}
+
+h1, h2, h3, h4, .font-serif-heading {
+  font-family: var(--font-serif);
+}
+
+/* Choppy Crop / Sticker Cutout Effect */
+.choppy-crop-frame {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  filter: drop-shadow(0 12px 24px rgba(167, 52, 83, 0.22));
+  transition: all 0.4s ease;
+}
+
+.choppy-crop-frame:hover {
+  transform: scale(1.02) rotate(-1deg);
+  filter: drop-shadow(0 16px 32px rgba(167, 52, 83, 0.35));
+}
+
+.sticker-outline {
+  position: relative;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 4px #ef6b8a, 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.dark .sticker-outline {
+  border: 4px solid #2a1a28;
+  box-shadow: 0 0 0 4px #ef6b8a, 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fff7f9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #170d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #eaddff;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a2842;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a73453;
+}
