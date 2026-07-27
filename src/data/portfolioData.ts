@@ -300,7 +300,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     badgeColor: "bg-[#a73453]/10 text-[#a73453]",
     verifyUrl: "pdf/Karirnex - Nadira Khumaira Putri - Sertifikat Data Analyst Batch 6.pdf",
     certificateImageUrl: "certificates/karirnex.png",
-    summary: "Rigorous 8-course series covering the end-to-end data analysis process: data cleaning, SQL querying, R programming, data visualization with Tableau, and presenting findings to executive decision makers."
+    summary: "Through 20 hours of training, I strengthened my technical stack to bridge business problems with data-driven solutions using Excel, SQL (Google BigQuery), Python (Google Colab), and Google Looker Studio. This hands-on program provided end-to-end expertise spanning data analytics fundamentals, cleansing, systematic workflows, and advanced data visualization with interactive dashboards through a practical mini project."
   },
   {
     id: "cert-2",
@@ -336,7 +336,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     badgeColor: "bg-[#006c4c]/10 text-[#006c4c]",
     verifyUrl: "CERTIFICATE OF COMPLETION_DS PROJECT MACHINE LEARNING - SKILL ACADEMY.pdf",
     certificateImageUrl: "certificates/CERTIFICATE OF COMPLETION_DS PROJECT MACHINE LEARNING - SKILL ACADEMY.jpg",
-    summary: "Professional front-end engineering program covering modern React architecture, state management, component lifecycle, UI/UX principles, and responsive web interface design."
+    summary: "This document is my Certificate of Completion for the Machine Learning course at Skill Academy by Ruangguru. This comprehensive program solidified my understanding of predictive modeling, from raw data processing to evaluating algorithm performance. A key highlight was building a diagnostic classification model, proving my capability to derive actionable insights from complex datasets."
   },
   {
     id: "cert-5",
