@@ -7,7 +7,7 @@ export const ProjectsSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const categories: ProjectCategory[] = ['All', 'Data Analysis', 'Data Science', 'Web Dev', 'Business & System Analysis'];
+  const categories: ProjectCategory[] = ['All', 'Data Analysis', 'Data Science', 'Data Engineering', 'Web Dev', 'Business & System Analysis'];
 
   const filteredProjects = selectedCategory === 'All'
     ? PROJECTS_DATA
