@@ -141,6 +141,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     toolsUsed: ["Python", "Power BI", "PostgreSQL"],
     featured: true,
+    liveUrl: "https://drive.google.com/file/d/1gizB7hVuyTundmld0FOAJEc9d4NJPKSb/view?usp=sharing",
     githubUrl: "https://github.com/nadiraaa123/E-Commerce-Customer-Behavior-Analysis"
   },
   {
