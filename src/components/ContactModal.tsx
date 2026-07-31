@@ -103,7 +103,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#251723] dark:text-[#fce8f3] block">LinkedIn</span>
-                  <span className="text-[11px] text-[#564145] dark:text-[#ddbfc3] block">linkedin.com/in/nadirakputri</span>
+                  <span className="text-[11px] text-[#564145] dark:text-[#ddbfc3] block">linkedin.com/in/nadira-khumaira/</span>
                 </div>
               </div>
               <span className="material-symbols-outlined text-sm text-[#564145] dark:text-[#ddbfc3] group-hover:translate-x-0.5 transition-transform">
@@ -126,7 +126,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#251723] dark:text-[#fce8f3] block">GitHub</span>
-                  <span className="text-[11px] text-[#564145] dark:text-[#ddbfc3] block">github.com/nadirakputri</span>
+                  <span className="text-[11px] text-[#564145] dark:text-[#ddbfc3] block">github.com/nadiraaa123</span>
                 </div>
               </div>
               <span className="material-symbols-outlined text-sm text-[#564145] dark:text-[#ddbfc3] group-hover:translate-x-0.5 transition-transform">
@@ -149,7 +149,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#251723] dark:text-[#fce8f3] block">Instagram</span>
-                  <span className="text-[11px] text-[#564145] dark:text-[#ddbfc3] block">@nadirakputri</span>
+                  <span className="text-[11px] text-[#564145] dark:text-[#ddbfc3] block">@nadirakhmr</span>
                 </div>
               </div>
               <span className="material-symbols-outlined text-sm text-[#564145] dark:text-[#ddbfc3] group-hover:translate-x-0.5 transition-transform">
