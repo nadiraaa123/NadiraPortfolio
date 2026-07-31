@@ -94,7 +94,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     toolsUsed: ["Docker", "Dagster", "Python", "Pandas", "PostgreSQL", "SQLAlchemy", "Pytest"],
     featured: true,
-    liveUrl: "projects/BIG DATA REPORT - NADIRA KHUMAIRA PUTRI - WORKSHOP FROM MATTEL.pdf",
+    liveUrl: "pdf/BIG DATA REPORT - NADIRA KHUMAIRA PUTRI - WORKSHOP FROM MATTEL.pdf",
     githubUrl: "https://github.com/nadiraaa123/dagster-workshop-multi",
   },
   {
