@@ -1,4 +1,4 @@
-export type ProjectCategory = 'All' | 'Data Analyst' | 'Data Science' | 'Web Dev' | 'UI/UX Design' | 'Business Analytics';
+export type ProjectCategory = All' | 'Data Analyst' | 'Data Analysis' | 'Data Science' | 'Data Engineering' | 'Web Dev' | 'UI/UX Design' | 'Business/System Analysis' | 'Business & System Analysis';
 
 export interface Metric {
   label: string;
