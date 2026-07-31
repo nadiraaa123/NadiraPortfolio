@@ -73,6 +73,30 @@ export const PROJECTS_DATA: Project[] = [
     liveUrl: "https://datastudio.google.com/reporting/2f5b0158-c6e7-4ad3-a938-ff562dab269d",
     githubUrl: "https://github.com/nadiraaa123/Data-Analyst-Portfolio-at-KarirNex-Bootcamp",
   },
+ {
+    id: "Dagster Multi-Container Data Pipeline Workshop",
+    title: "Dagster Multi-Container Data Pipeline Workshop",
+    subtitle: "Docker-Based Data Orchestration & Cross-Pipeline Analytics",
+    category: "Data Engineering",
+    tags: ["Docker", "Dagster", "Python", "PostgreSQL", "Pandas"],
+    description: "Built and extended a multi-container Dagster orchestration system, culminating in a custom cross-pipeline reporting pipeline built from scratch.",
+    fullStory: "In this Big Data course workshop, I worked with a multi-container Dagster and Docker architecture where each data pipeline (product catalog, currency exchange rates, ML predictions) runs as an independent container, all converging into a shared PostgreSQL warehouse. Beyond completing the core exercises (building derived assets, cross-container data reads, and data quality checks), I designed and built a custom capstone pipeline, pipeline_reporting, from scratch: a fourth independent container that combines ML-predicted high-value orders with EUR-converted order totals into a single analytics report, complete with its own Dagster asset check for data quality validation.",
+    image: "projects/docker.png",
+    metrics: [
+      { label: "Pipeline Containers", value: "4" },
+      { label: "Data Quality Checks", value: "2 Passed" },
+      { label: "High-Value Orders Flagged", value: "19" }
+    ],
+    keyInsights: [
+      "Architecture: Designed a new independent pipeline container (pipeline_reporting) that reads directly from a shared warehouse, following production-grade multi-container orchestration patterns.",
+      "Cross-Pipeline Analytics: Combined ML model predictions with real-time currency conversion logic to surface high-value orders without creating direct dependencies between containers.",
+      "Data Quality: Implemented a custom Dagster asset check to validate report integrity, ensuring zero invalid (negative or zero) currency-converted values before data reaches downstream consumers."
+    ],
+    toolsUsed: ["Docker", "Dagster", "Python", "Pandas", "PostgreSQL", "SQLAlchemy", "Pytest"],
+    featured: true,
+    liveUrl: "projects/BIG DATA REPORT - NADIRA KHUMAIRA PUTRI - WORKSHOP FROM MATTEL.pdf",
+    githubUrl: "https://github.com/nadiraaa123/dagster-workshop-multi",
+  },
   {
     id: "Machine Learning Project: Breast Cancer Diagnostic Analysis",
     title: "Machine Learning Project: Breast Cancer Diagnostic Analysis",
