@@ -90,7 +90,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
 
             {/* LinkedIn */}
             <a
-              href={SOCIAL_LINKS.linkedin}
+              href={https://www.linkedin.com/in/nadira-khumaira/}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-3 bg-[#fff7f9] dark:bg-[#281827] hover:bg-[#ffeff9] dark:hover:bg-[#2e1c2d] border border-[#f4dced] dark:border-[#42263e] rounded-xl transition-all group"
@@ -113,7 +113,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
 
             {/* GitHub */}
             <a
-              href={SOCIAL_LINKS.github}
+              href={https://github.com/nadiraaa123/}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-3 bg-[#fff7f9] dark:bg-[#281827] hover:bg-[#ffeff9] dark:hover:bg-[#2e1c2d] border border-[#f4dced] dark:border-[#42263e] rounded-xl transition-all group"
@@ -136,7 +136,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
 
             {/* Instagram */}
             <a
-              href={SOCIAL_LINKS.instagram}
+              href={https://www.instagram.com/nadirakhmr/}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-3 bg-[#fff7f9] dark:bg-[#281827] hover:bg-[#ffeff9] dark:hover:bg-[#2e1c2d] border border-[#f4dced] dark:border-[#42263e] rounded-xl transition-all group"
