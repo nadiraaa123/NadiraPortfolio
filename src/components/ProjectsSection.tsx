@@ -21,9 +21,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [showAll, setShowAll] = useState<boolean>(false);
 
-<<<<<<< HEAD
-  const categories: ProjectCategory[] = ['All', 'Data Analysis', 'Data Science', 'Data Engineering', 'Web Dev', 'Business & System Analysis'];
-=======
   // Filter projects according to category
   const filteredProjects = (selectedCategory === 'All' || selectedCategory === 'Semua')
     ? projectsData
@@ -39,7 +36,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
         }
         return p.category === selectedCategory;
       });
->>>>>>> c185f87
 
   // Limit displayed projects to 6 unless 'showAll' is active
   const INITIAL_LIMIT = 6;
@@ -48,7 +44,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
 
   const handleCategoryChange = (cat: string) => {
     setSelectedCategory(cat);
-    setShowAll(false); // Reset to collapsed view when switching tabs
+    setShowAll(false);
   };
 
   return (
