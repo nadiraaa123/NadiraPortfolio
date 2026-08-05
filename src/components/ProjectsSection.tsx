@@ -1,17 +1,51 @@
 import React, { useState } from 'react';
-import { PROJECTS_DATA } from '../data/portfolioData';
-import { Project, ProjectCategory } from '../types';
+import { getProjectsData } from '../data/portfolioData';
+import { Project } from '../types';
 import { CaseStudyModal } from './CaseStudyModal';
+import { TRANSLATIONS, Language } from '../data/translations';
 
-export const ProjectsSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All');
+interface ProjectsSectionProps {
+  lang: Language;
+}
+
+export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
+  const isInd = lang === 'id';
+  const t = TRANSLATIONS[lang].projects;
+  const projectsData = getProjectsData(lang);
+
+  const categories = isInd
+    ? ['Semua', 'Analisis Data', 'Data Science', 'Data Engineering', 'Web Dev', 'Analisis Bisnis & Sistem']
+    : ['All', 'Data Analysis', 'Data Science', 'Data Engineering', 'Web Dev', 'Business & System Analysis'];
+
+  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0]);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
-  const categories: ProjectCategory[] = ['All', 'Data Analysis', 'Data Science', 'Data Engineering', 'Web Dev', 'Business & System Analysis'];
+  // Filter projects according to category
+  const filteredProjects = (selectedCategory === 'All' || selectedCategory === 'Semua')
+    ? projectsData
+    : projectsData.filter((p) => {
+        if (selectedCategory === 'Analisis Data' || selectedCategory === 'Data Analysis') {
+          return p.category.includes('Analys') || p.category.includes('Analisi') || p.category === 'Data Analyst';
+        }
+        if (selectedCategory === 'Data Engineering') {
+          return p.category.includes('Engineering') || p.category.includes('Engineer');
+        }
+        if (selectedCategory === 'Analisis Bisnis & Sistem' || selectedCategory === 'Business & System Analysis') {
+          return p.category.includes('Bisnis') || p.category.includes('Business') || p.category.includes('System');
+        }
+        return p.category === selectedCategory;
+      });
 
-  const filteredProjects = selectedCategory === 'All'
-    ? PROJECTS_DATA
-    : PROJECTS_DATA.filter((p) => p.category === selectedCategory);
+  // Limit displayed projects to 6 unless 'showAll' is active
+  const INITIAL_LIMIT = 6;
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_LIMIT);
+  const hasMore = filteredProjects.length > INITIAL_LIMIT;
+
+  const handleCategoryChange = (cat: string) => {
+    setSelectedCategory(cat);
+    setShowAll(false); // Reset to collapsed view when switching tabs
+  };
 
   return (
     <section id="projects" className="py-16 lg:py-24 bg-[#ffeff9]/30 dark:bg-[#1f121e]/40 border-t border-[#f4dced]/50 dark:border-[#382035]">
@@ -20,13 +54,13 @@ export const ProjectsSection: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs font-bold text-[#a73453] dark:text-[#ef6b8a] uppercase tracking-widest block mb-3">
-            PORTFOLIO HIGHLIGHTS
+            {t.subtitle}
           </span>
           <h2 className="font-serif text-3xl lg:text-4xl text-[#251723] dark:text-[#fce8f3] font-semibold mb-4">
-            Featured Projects & Case Studies
+            {t.title}
           </h2>
           <p className="text-base text-[#564145] dark:text-[#ddbfc3]">
-            Explore real-world data science pipelines, analytics dashboards, and custom web applications.
+            {t.description}
           </p>
         </div>
 
@@ -37,7 +71,7 @@ export const ProjectsSection: React.FC = () => {
             return (
               <button
                 key={cat}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => handleCategoryChange(cat)}
                 className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   isActive
                     ? 'bg-[#a73453] dark:bg-[#ef6b8a] text-white shadow-md'
@@ -52,7 +86,7 @@ export const ProjectsSection: React.FC = () => {
 
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <div
               key={project.id}
               className="bg-white dark:bg-[#20121e] rounded-[28px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f4dced] dark:border-[#42263e] flex flex-col group hover:-translate-y-1"
@@ -70,7 +104,7 @@ export const ProjectsSection: React.FC = () => {
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-[#6c49b3] text-white px-3 py-1 rounded-full text-[11px] font-bold flex items-center gap-1 shadow-sm">
                     <span className="material-symbols-outlined text-xs">star</span>
-                    Featured
+                    {isInd ? 'Unggulan' : 'Featured'}
                   </div>
                 )}
               </div>
@@ -111,9 +145,11 @@ export const ProjectsSection: React.FC = () => {
                           {project.metrics[0].value}
                         </p>
                       </div>
-                      <span className="text-[10px] font-semibold text-[#006c4c] dark:text-[#34d399] bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-full">
-                        {project.metrics[0].change}
-                      </span>
+                      {project.metrics[0].change && (
+                        <span className="text-[10px] font-semibold text-[#006c4c] dark:text-[#34d399] bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-full">
+                          {project.metrics[0].change}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -123,13 +159,34 @@ export const ProjectsSection: React.FC = () => {
                   onClick={() => setActiveProject(project)}
                   className="w-full py-3 bg-[#ffe7f8] dark:bg-[#341d31] text-[#a73453] dark:text-[#ef6b8a] hover:bg-[#a73453] hover:text-white dark:hover:bg-[#ef6b8a] dark:hover:text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer mt-2"
                 >
-                  View Case Study
+                  {t.viewCaseStudy}
                   <span className="material-symbols-outlined text-base">visibility</span>
                 </button>
               </div>
             </div>
           ))}
         </div>
+
+        {/* See All / Show Less Toggle Button */}
+        {(hasMore || showAll) && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-8 py-3.5 bg-white dark:bg-[#20121e] hover:bg-[#ffeff9] dark:hover:bg-[#2e1c2d] text-[#a73453] dark:text-[#ef6b8a] border border-[#a73453]/30 dark:border-[#ef6b8a]/30 rounded-full text-xs font-bold transition-all shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-2"
+            >
+              <span>
+                {showAll
+                  ? (isInd ? 'Tampilkan Lebih Sedikit' : 'Show Less')
+                  : (isInd 
+                      ? `Lihat Semua Project (${filteredProjects.length} Project)` 
+                      : `View All Projects (${filteredProjects.length} Projects)`)}
+              </span>
+              <span className="material-symbols-outlined text-base">
+                {showAll ? 'keyboard_arrow_up' : 'grid_view'}
+              </span>
+            </button>
+          </div>
+        )}
 
       </div>
 
@@ -138,6 +195,7 @@ export const ProjectsSection: React.FC = () => {
         <CaseStudyModal
           project={activeProject}
           onClose={() => setActiveProject(null)}
+          lang={lang}
         />
       )}
     </section>
