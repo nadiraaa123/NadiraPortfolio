@@ -10,7 +10,7 @@ export interface Project {
   id: string;
   title: string;
   subtitle: string;
-  category: 'Data Analysis' | 'Data Science' | 'Web Dev' | 'UI/UX Design' | 'Business & System Analysis' | string;
+  category: 'Data Analysis' | 'Data Science' | 'Data Engineering'| 'Web Dev' | 'UI/UX Design' | 'Business & System Analysis' | string;
   tags: string[];
   description: string;
   fullStory?: string;
