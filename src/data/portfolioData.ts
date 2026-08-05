@@ -73,6 +73,30 @@ export const PROJECTS_DATA: Project[] = [
     liveUrl: "https://datastudio.google.com/reporting/2f5b0158-c6e7-4ad3-a938-ff562dab269d",
     githubUrl: "https://github.com/nadiraaa123/Data-Analyst-Portfolio-at-KarirNex-Bootcamp",
   },
+ {
+    id: "Dagster Multi-Container Data Pipeline Workshop",
+    title: "Dagster Multi-Container Data Pipeline Workshop",
+    subtitle: "Docker-Based Data Orchestration & Cross-Pipeline Analytics",
+    category: "Data Engineering",
+    tags: ["Docker", "Dagster", "Python", "PostgreSQL", "Pandas"],
+    description: "Built and extended a multi-container Dagster orchestration system, culminating in a custom cross-pipeline reporting pipeline built from scratch.",
+    fullStory: "In this Big Data course workshop, I worked with a multi-container Dagster and Docker architecture where each data pipeline (product catalog, currency exchange rates, ML predictions) runs as an independent container, all converging into a shared PostgreSQL warehouse. Beyond completing the core exercises (building derived assets, cross-container data reads, and data quality checks), I designed and built a custom capstone pipeline, pipeline_reporting, from scratch: a fourth independent container that combines ML-predicted high-value orders with EUR-converted order totals into a single analytics report, complete with its own Dagster asset check for data quality validation.",
+    image: "projects/docker.png",
+    metrics: [
+      { label: "Pipeline Containers", value: "4" },
+      { label: "Data Quality Checks", value: "2 Passed" },
+      { label: "High-Value Orders Flagged", value: "19" }
+    ],
+    keyInsights: [
+      "Architecture: Designed a new independent pipeline container (pipeline_reporting) that reads directly from a shared warehouse, following production-grade multi-container orchestration patterns.",
+      "Cross-Pipeline Analytics: Combined ML model predictions with real-time currency conversion logic to surface high-value orders without creating direct dependencies between containers.",
+      "Data Quality: Implemented a custom Dagster asset check to validate report integrity, ensuring zero invalid (negative or zero) currency-converted values before data reaches downstream consumers."
+    ],
+    toolsUsed: ["Docker", "Dagster", "Python", "Pandas", "PostgreSQL", "SQLAlchemy", "Pytest"],
+    featured: true,
+    liveUrl: "pdf/BIG DATA REPORT - NADIRA KHUMAIRA PUTRI - WORKSHOP FROM MATTEL.pdf",
+    githubUrl: "https://github.com/nadiraaa123/dagster-workshop-multi",
+  },
   {
     id: "Machine Learning Project: Breast Cancer Diagnostic Analysis",
     title: "Machine Learning Project: Breast Cancer Diagnostic Analysis",
@@ -117,6 +141,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     toolsUsed: ["Python", "Power BI", "PostgreSQL"],
     featured: true,
+    liveUrl: "https://drive.google.com/file/d/1gizB7hVuyTundmld0FOAJEc9d4NJPKSb/view?usp=sharing",
     githubUrl: "https://github.com/nadiraaa123/E-Commerce-Customer-Behavior-Analysis"
   },
   {
@@ -300,7 +325,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     badgeColor: "bg-[#a73453]/10 text-[#a73453]",
     verifyUrl: "pdf/Karirnex - Nadira Khumaira Putri - Sertifikat Data Analyst Batch 6.pdf",
     certificateImageUrl: "certificates/karirnex.png",
-    summary: "Rigorous 8-course series covering the end-to-end data analysis process: data cleaning, SQL querying, R programming, data visualization with Tableau, and presenting findings to executive decision makers."
+    summary: "Through 20 hours of training, I strengthened my technical stack to bridge business problems with data-driven solutions using Excel, SQL (Google BigQuery), Python (Google Colab), and Google Looker Studio. This hands-on program provided end-to-end expertise spanning data analytics fundamentals, cleansing, systematic workflows, and advanced data visualization with interactive dashboards through a practical mini project."
   },
   {
     id: "cert-2",
@@ -336,7 +361,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     badgeColor: "bg-[#006c4c]/10 text-[#006c4c]",
     verifyUrl: "CERTIFICATE OF COMPLETION_DS PROJECT MACHINE LEARNING - SKILL ACADEMY.pdf",
     certificateImageUrl: "certificates/CERTIFICATE OF COMPLETION_DS PROJECT MACHINE LEARNING - SKILL ACADEMY.jpg",
-    summary: "Professional front-end engineering program covering modern React architecture, state management, component lifecycle, UI/UX principles, and responsive web interface design."
+    summary: "This document is my Certificate of Completion for the Machine Learning course at Skill Academy by Ruangguru. This comprehensive program solidified my understanding of predictive modeling, from raw data processing to evaluating algorithm performance. A key highlight was building a diagnostic classification model, proving my capability to derive actionable insights from complex datasets."
   },
   {
     id: "cert-5",
