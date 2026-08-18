@@ -43,39 +43,48 @@ const ENGLISH_STRINGS = {
     subtitle: 'PORTFOLIO HIGHLIGHTS',
     title: 'Featured Projects & Case Studies',
     description: 'Explore real-world data science pipelines, analytics dashboards, and custom web applications.',
-    viewCaseStudy: 'View Case Study',
-    all: 'All'
+    filterAll: 'All',
+    viewLive: 'Live Demo / Report',
+    viewGithub: 'GitHub Repo',
+    viewCaseStudy: 'Case Study',
+    loadMore: 'Load More Projects',
+    showLess: 'Show Less'
   },
   work: {
-    subtitle: 'CAREER TRAJECTORY',
-    title: 'Work & Professional Experience',
-    description: 'Bringing analytical rigor and technical execution to teams in data science and web engineering.'
+    subtitle: 'CAREER PATH',
+    title: 'Work Experience',
+    description: 'My journey through tech internships, research, and collaborative project execution.'
   },
   education: {
     subtitle: 'ACADEMIC BACKGROUND',
-    title: 'Education & Academic Honors'
+    title: 'Education & Honors',
+    description: 'Formal academic background and key concentrations in Data Science and Systems Analysis.'
   },
   certifications: {
-    subtitle: 'CONTINUOUS LEARNING',
-    title: 'Certifications & Credentials',
-    description: 'Verified certifications in data analytics, machine learning, and web engineering.',
-    searchPlaceholder: 'Filter certifications or skills...',
-    viewMore: 'View Certificate (PDF)'
+    subtitle: 'VERIFIED CREDENTIALS',
+    title: 'Certificates & Competencies',
+    description: 'Industry certifications validating my skills across Data Analytics, Machine Learning, Web Development, and UI/UX.',
+    searchPlaceholder: 'Search certifications by title, issuer, or skill...',
+    viewDoc: 'View Document',
+    verifyCert: 'Verify Credential'
   },
   organizations: {
-    subtitle: 'LEADERSHIP & INVOLVEMENT',
-    title: 'Organizations & Communities'
+    subtitle: 'LEADERSHIP & ACTIVITIES',
+    title: 'Organizational Experience',
+    description: 'Active participation in developer communities, leadership initiatives, and social impact projects.'
   },
   cta: {
-    title: 'Let\'s build something data-driven together.',
-    subtitle: 'Currently open for freelance opportunities, data science consulting, and web engineering collaborations.',
-    note: 'Whether you need end-to-end data pipelines or custom web solutions, I\'m here to help.',
-    contactNow: 'Contact Me Now',
-    downloadPdf: 'Download CV PDF'
+    title: 'Have a Project in Mind or Want to Collaborate?',
+    subtitle: 'I am always open to discussing new data science projects, web development opportunities, or data analyst roles.',
+    getInTouch: 'Get in Touch',
+    downloadCv: 'Download CV'
   },
   footer: {
-    subtitle: 'Data Science Enthusiast & Web Developer',
-    copyright: '© 2026 NADIRA KHUMAIRA PUTRI. ALL RIGHTS RESERVED.'
+    quickLinks: 'Quick Links',
+    connect: 'Connect',
+    contactMe: 'Contact Me',
+    rights: 'All rights reserved.',
+    sharePortfolio: 'Share Portfolio'
   },
   contactModal: {
     tag: 'GET IN TOUCH',
@@ -101,7 +110,14 @@ const ENGLISH_STRINGS = {
   }
 };
 
-export const TRANSLATIONS = {
+export const TRANSLATIONS: Record<string, typeof ENGLISH_STRINGS> = new Proxy({
   en: ENGLISH_STRINGS,
   id: ENGLISH_STRINGS
-};
+}, {
+  get: (target, prop) => {
+    if (typeof prop === 'string' && prop in target) {
+      return target[prop as keyof typeof target];
+    }
+    return ENGLISH_STRINGS;
+  }
+});
