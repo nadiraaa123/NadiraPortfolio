@@ -1,4 +1,5 @@
 import { Project, WorkExperience, EducationItem, CertificateItem, OrganizationItem, TechSkillCategory } from '../types';
+import { Language } from './translations';
 
 export const HERO_DATA = {
   name: "Nadira",
@@ -9,8 +10,12 @@ export const HERO_DATA = {
   avatarUrl: "https://lh3.googleusercontent.com/aida/AP1WRLt9rsGecruFUUKVH_UYbkc_DWIqqrdrHcVN5zajPe9jUmTAzFm6sw3EU8rHNo_LpxWjKHUXbZt-7_3U9-Mm0KhlYWClAKDd7oOoF7-YokQloi1-BTSXw-Os5WXom-0sJchackLO7LHytpcYVi4G6ZcWMeXKDRe3pEU24o1NwerCs2HyDUT-DjGFmUZxfv9a-6neGs6z2HcZnvk_cEW8bknAeWjZHn6woC-Tz4zhXBEYltm9zxR11Ao7Sk3jC_6g2_t6MkDW5mUm0uw",
   heroImageUrl: "images/nadira-no-logo-pu-no-bg.png",
   aboutImageUrl: "images/foto cantik nadira.jpeg",
-  cvPdfUrl: "pdf/NADIRA KHUMAIRA PUTRI_CV.pdf"
+  cvPdfUrl: "pdf/NADIRA KHUMAIRA PUTRI_Curriculum Vitae.pdf"
 };
+
+export function getHeroData(_lang?: Language) {
+  return HERO_DATA;
+}
 
 export const ABOUT_DATA = {
   subtitle: "THE STORY SO FAR",
@@ -26,6 +31,10 @@ export const ABOUT_DATA = {
     { label: "UI/UX Design", icon: "brush", color: "text-[#ef6b8a]" }
   ]
 };
+
+export function getAboutData(_lang?: Language) {
+  return ABOUT_DATA;
+}
 
 export const SKILL_CATEGORIES: TechSkillCategory[] = [
   {
@@ -48,15 +57,43 @@ export const SKILL_CATEGORIES: TechSkillCategory[] = [
   }
 ];
 
+export function getSkillCategories(_lang?: Language): TechSkillCategory[] {
+  return SKILL_CATEGORIES;
+}
+
 export const PROJECTS_DATA: Project[] = [
+  {
+    id: "Sales Performance Analysis using Tableau",
+    title: "Sales Performance Analysis using Tableau",
+    subtitle: "Interactive Sales, Profit & Quantity Analysis in Tableau",
+    category: "Data Analysis",
+    tags: ["Python", "Pandas", "Tableau Public"],
+    description: "Turned a raw, messy transactional dataset into a clean, decision-ready Tableau dashboard tracking sales, profit, and quantity performance.",
+    fullStory: "Built an interactive sales dashboard covering sales, profit, and quantity performance across a four-year period (2020-2023). This project intentionally used the raw, unprocessed EU version of the dataset (9,994 order records across Orders, Customers, Products, and Location tables) to demonstrate a full data cleaning workflow with Python before moving into Tableau. Cleaning tasks included fixing semicolon delimiters, converting European comma-decimal formatting, correcting cp437 encoding, parsing day-first dates, removing duplicates, and validating referential integrity across all tables. The resulting dashboard helps sales managers and executives track year-over-year performance, spot the highest and lowest performing months, compare product subcategories on sales versus profit, and flag weeks that fall above or below the weekly average.",
+    image: "projects/Sales Dashboard (1).png",
+    metrics: [
+      { label: "Total Sales", value: "$733K"},
+      { label: "Total Profit", value: "$93k"},
+      { label: "Total Quantity", value: "12k"}
+    ],
+    keyInsights: [
+      "Performance Tracking: Total Sales reached $733 thousand (up 20.4%), Total Profit reached $93 thousand (up 14.2%), and Total Quantity reached 12 thousand units (up 26.8%) in 2023.",
+      "Data Quality Focus: Resolved delimiter, decimal format, encoding, and date-parsing issues in the raw EU dataset using Pandas, then validated referential integrity across Orders, Customers, Products, and Location tables.",
+      "Product Insight: Identified subcategories that perform well on sales but underperform on profit by comparing current vs. prior year sales alongside profit contribution."
+    ],
+    toolsUsed: ["Python", "Scikit-Learn", "Excel", "Tableau"],
+    featured: true,
+    liveUrl: "https://public.tableau.com/views/SalesDashboard_17863828386320/SalesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    githubUrl: "https://github.com/nadiraaa123/Sales-Performance-Dashboard",
+  },
   {
     id: "Data Analyst Portfolio at KarirNex Bootcamp",
     title: "Data Analyst Portfolio at KarirNex Bootcamp",
     subtitle: "Business Insights & Dashboard Visualization",
     category: "Data Analysis",
     tags: ["Python", "Scikit-Learn", "Looker Studio", "Excel", "Google BigQuery"],
-    description: "Built an end-to-end data processing, from cleaning and aggregation to visualization and strategic recommendation.",
-    fullStory: "During the Data Analyst with AI bootcamp, I analyzed a furniture retail dataset (10.000 rows data) to transform raw data into actionable business insights. The project focused on end-to-end data processing, from cleaning and aggregation to visualization and strategic recommendation.",
+    description: "Built an end-to-end data processing pipeline, from cleaning and aggregation to visualization and strategic recommendations.",
+    fullStory: "During the Data Analyst with AI bootcamp, I analyzed a furniture retail dataset (10.000 rows of data) to transform raw data into actionable business insights. The project focused on end-to-end data processing, from cleaning and aggregation to visualization and strategic recommendation.",
     image: "projects/dashboard-karirnex.png",
     metrics: [
       { label: "Total Sales", value: "$5.27B"},
@@ -73,7 +110,7 @@ export const PROJECTS_DATA: Project[] = [
     liveUrl: "https://datastudio.google.com/reporting/2f5b0158-c6e7-4ad3-a938-ff562dab269d",
     githubUrl: "https://github.com/nadiraaa123/Data-Analyst-Portfolio-at-KarirNex-Bootcamp",
   },
- {
+  {
     id: "Dagster Multi-Container Data Pipeline Workshop",
     title: "Dagster Multi-Container Data Pipeline Workshop",
     subtitle: "Docker-Based Data Orchestration & Cross-Pipeline Analytics",
@@ -270,6 +307,10 @@ export const PROJECTS_DATA: Project[] = [
   }
 ];
 
+export function getProjectsData(_lang?: Language): Project[] {
+  return PROJECTS_DATA;
+}
+
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     id: "exp-1",
@@ -288,6 +329,10 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     skills: ["Python", "Scikit-Learn", "Numpy", "Pandas", "Matplotlib", "Seaborn", "NLP Tools"]
   }
 ];
+
+export function getWorkExperience(_lang?: Language): WorkExperience[] {
+  return WORK_EXPERIENCE;
+}
 
 export const EDUCATION_DATA: EducationItem[] = [
   {
@@ -313,6 +358,10 @@ export const EDUCATION_DATA: EducationItem[] = [
     ]
   }
 ];
+
+export function getEducationData(_lang?: Language): EducationItem[] {
+  return EDUCATION_DATA;
+}
 
 export const CERTIFICATES_DATA: CertificateItem[] = [
   {
@@ -349,7 +398,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     badgeColor: "bg-[#006c4c]/10 text-[#006c4c]",
     verifyUrl: "pdf/MYSKILL BOOTCAMP UI UX CERTIFICATE.pdf",
     certificateImageUrl: "certificates/uiux.png",
-    summary: "MySkill UI-UX Research and Design: Fullstack Intensive Bootcamp (Batch 19) from January 14 to February 20, 2025. The program covered comprehensive topics including fundamental UI-UX design, user research, wireframing, advanced Figma prototyping, UX writing, and usability testing."
+    summary: "MySkill UI-UX Research and Design: Fullstack Intensive Bootcamp (Batch 19) from January 14 to February 20, 2025. The program covered comprehensive topics including fundamental UI-UX design, user research, wireframing, advanced Figma prototyping, UX writing, and practical case studies."
   },
   {
     id: "cert-4",
@@ -387,6 +436,10 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     summary: "Award for best innovation in AI-based application development to support public health."
   }
 ];
+
+export function getCertificatesData(_lang?: Language): CertificateItem[] {
+  return CERTIFICATES_DATA;
+}
 
 export const ORGANIZATIONS_DATA: OrganizationItem[] = [
   {
@@ -486,5 +539,8 @@ export const ORGANIZATIONS_DATA: OrganizationItem[] = [
       "images/volunteer3.png"
     ]
   }
-  
 ];
+
+export function getOrganizationsData(_lang?: Language): OrganizationItem[] {
+  return ORGANIZATIONS_DATA;
+}
