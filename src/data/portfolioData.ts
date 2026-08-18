@@ -111,6 +111,29 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: "https://github.com/nadiraaa123/Data-Analyst-Portfolio-at-KarirNex-Bootcamp",
   },
   {
+    id: "E-Commerce Customer Behavior Analysis",
+    title: "E-Commerce Customer Behavior Analysis",
+    subtitle: "Analyzing Purchase Patterns & Demographic Trends in E-Commerce",
+    category: "Data Analysis",
+    tags: ["Python", "Power BI", "PostgreSQL"],
+    description: "The business faces a challenge in understanding customer shopping patterns from 3,900 transaction records. The goal is to analyze purchase patterns, identify key customer segments, and provide actionable insights for marketing and product strategy.",
+    fullStory: "The business faces a challenge in understanding customer shopping patterns from 3,900 transaction records. Without deep insights into top-selling categories, subscription behavior, and demographic preferences, it is difficult to optimize business growth. Therefore, this project analyzes e-commerce shopping data to provide actionable, data-driven insights that can support and drive more effective marketing and operational strategies.",
+    image: "projects/customer-behavior.png",
+    metrics: [
+      { label: "Total Customers", value: "3.9K"},
+      { label: "Average Purchase Amount", value: "$59.76"},
+      { label: "Average Review Rating", value: "3.75"}
+    ],
+    keyInsights: [
+      "Seasonal & Regional Peaks: Spring leads overall orders (999), while Montana drives the highest revenue ($5,780), closely followed by California ($5,605) and Fall orders (975).",
+      "Customer Behavior & Demographics: Non-subscribers represent a strong conversion opportunity with an identical $59.81 average spend (despite only 27% current subscription), alongside a distinct middle-aged preference for PayPal."
+    ],
+    toolsUsed: ["Python", "Power BI", "PostgreSQL"],
+    featured: true,
+    liveUrl: "https://drive.google.com/file/d/1gizB7hVuyTundmld0FOAJEc9d4NJPKSb/view?usp=sharing",
+    githubUrl: "https://github.com/nadiraaa123/E-Commerce-Customer-Behavior-Analysis"
+  },
+  {
     id: "Dagster Multi-Container Data Pipeline Workshop",
     title: "Dagster Multi-Container Data Pipeline Workshop",
     subtitle: "Docker-Based Data Orchestration & Cross-Pipeline Analytics",
@@ -157,29 +180,6 @@ export const PROJECTS_DATA: Project[] = [
     toolsUsed: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
     featured: true,
     githubUrl: "https://github.com/nadiraaa123/Machine-Learning-Project-Breast-Cancer-Diagnostic-Analysis-",
-  },
-  {
-    id: "E-Commerce Customer Behavior Analysis",
-    title: "E-Commerce Customer Behavior Analysis",
-    subtitle: "Analyzing Purchase Patterns & Demographic Trends in E-Commerce",
-    category: "Data Analysis",
-    tags: ["Python", "Power BI", "PostgreSQL"],
-    description: "The business faces a challenge in understanding customer shopping patterns from 3,900 transaction records. The goal is to analyze purchase patterns, identify key customer segments, and provide actionable insights for marketing and product strategy.",
-    fullStory: "The business faces a challenge in understanding customer shopping patterns from 3,900 transaction records. Without deep insights into top-selling categories, subscription behavior, and demographic preferences, it is difficult to optimize business growth. Therefore, this project analyzes e-commerce shopping data to provide actionable, data-driven insights that can support and drive more effective marketing and operational strategies.",
-    image: "projects/customer-behavior.png",
-    metrics: [
-      { label: "Total Customer", value: "3.9K"},
-      { label: "Average Purchase Amount", value: "$59.76"},
-      { label: "Average Review Rating", value: "3.75"}
-    ],
-    keyInsights: [
-      "Seasonal & Regional Peaks: Spring leads overall orders (999), while Montana drives the highest revenue ($5,780), closely followed by California ($5,605) and Fall orders (975).",
-      "Customer Behavior & Demographics: Non-subscribers represent a strong conversion opportunity with an identical $59.81 average spend (despite only 27% current subscription), alongside a distinct middle-aged preference for PayPal."
-    ],
-    toolsUsed: ["Python", "Power BI", "PostgreSQL"],
-    featured: true,
-    liveUrl: "https://drive.google.com/file/d/1gizB7hVuyTundmld0FOAJEc9d4NJPKSb/view?usp=sharing",
-    githubUrl: "https://github.com/nadiraaa123/E-Commerce-Customer-Behavior-Analysis"
   },
   {
     id: "DVD Rental Analytics Dashboard",
