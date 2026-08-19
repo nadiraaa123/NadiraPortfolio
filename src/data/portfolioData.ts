@@ -10,7 +10,7 @@ export const HERO_DATA = {
   avatarUrl: "https://lh3.googleusercontent.com/aida/AP1WRLt9rsGecruFUUKVH_UYbkc_DWIqqrdrHcVN5zajPe9jUmTAzFm6sw3EU8rHNo_LpxWjKHUXbZt-7_3U9-Mm0KhlYWClAKDd7oOoF7-YokQloi1-BTSXw-Os5WXom-0sJchackLO7LHytpcYVi4G6ZcWMeXKDRe3pEU24o1NwerCs2HyDUT-DjGFmUZxfv9a-6neGs6z2HcZnvk_cEW8bknAeWjZHn6woC-Tz4zhXBEYltm9zxR11Ao7Sk3jC_6g2_t6MkDW5mUm0uw",
   heroImageUrl: "images/nadira-no-logo-pu-no-bg.png",
   aboutImageUrl: "images/foto cantik nadira.jpeg",
-  cvPdfUrl: "pdf/NADIRA KHUMAIRA PUTRI_Curriculum Vitae.pdf"
+  cvPdfUrl: "pdf/NADIRA KHUMAIRA PUTRI - CV - ENGLISH.pdf"
 };
 
 export function getHeroData(_lang?: Language) {
