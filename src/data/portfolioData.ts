@@ -6,7 +6,7 @@ export const HERO_DATA = {
   middleName: "Khumaira",
   lastName: "Putri",
   badge: "AVAILABLE FOR NEW PROJECTS",
-  tagline: "6th-semester Computer Science student specializing in Data Science. Passionate about transforming data into meaningful insights and building beautiful digital experiences.",
+  tagline: "7th-semester Computer Science student specializing in Data Science. Passionate about transforming data into meaningful insights and building beautiful digital experiences.",
   avatarUrl: "https://lh3.googleusercontent.com/aida/AP1WRLt9rsGecruFUUKVH_UYbkc_DWIqqrdrHcVN5zajPe9jUmTAzFm6sw3EU8rHNo_LpxWjKHUXbZt-7_3U9-Mm0KhlYWClAKDd7oOoF7-YokQloi1-BTSXw-Os5WXom-0sJchackLO7LHytpcYVi4G6ZcWMeXKDRe3pEU24o1NwerCs2HyDUT-DjGFmUZxfv9a-6neGs6z2HcZnvk_cEW8bknAeWjZHn6woC-Tz4zhXBEYltm9zxR11Ao7Sk3jC_6g2_t6MkDW5mUm0uw",
   heroImageUrl: "images/nadira-no-logo-pu-no-bg.png",
   aboutImageUrl: "images/foto cantik nadira.jpeg",
