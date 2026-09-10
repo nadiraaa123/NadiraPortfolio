@@ -312,8 +312,25 @@ export function getProjectsData(_lang?: Language): Project[] {
 }
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
+
   {
-    id: "exp-1",
+  "id": "exp-1",
+  "role": "Data and Network Planning Intern",
+  "company": "PT PLN PERSERO",
+  "period": "August 2026 - Present",
+  "type": "Internship",
+  "location": "Indonesia",
+  "description": "Managed infrastructure data, automated operational workflows, and developed interactive monitoring systems to support efficient electrical network planning and data-driven decision-making.",
+  "achievements": [
+    "Developed an interactive transformer load tracking dashboard featuring color-coded status indicators (Green: Low, Yellow: Medium, Red: High) and proportional kWh scaling for real-time capacity monitoring.",
+    "Managed and maintained operational company websites, utilizing Google Apps Script for automation, Cloudflare for domain and security management, and Google Sheets as the core database.",
+    "Integrated internal databases with AP2T (Aplikasi Pelayanan Pelanggan Terpadu) to ensure seamless data synchronization and support efficient PLN operational workflows."
+  ],
+  "skills": ["Google Apps Script", "Cloudflare", "Google Sheets", "AP2T", "Tableau", "Data Visualization", "Dashboard Development", "Workflow Automation"]
+  }
+  
+  {
+    id: "exp-2",
     role: "Data Analyst Intern",
     company: "Codveda Technologies",
     period: "March 2026 - April 2026",
