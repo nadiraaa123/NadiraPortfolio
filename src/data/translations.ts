@@ -22,7 +22,7 @@ const ENGLISH_STRINGS = {
   hero: {
     badge: 'AVAILABLE FOR NEW PROJECTS',
     greeting: 'Data Science Enthusiast & Web Developer',
-    tagline: '6th-semester Computer Science student specializing in Data Science. Passionate about transforming data into meaningful insights and building beautiful digital experiences.',
+    tagline: '7th-semester Computer Science student specializing in Data Science. Passionate about transforming data into meaningful insights and building beautiful digital experiences.',
     getInTouch: 'Get in Touch',
     viewWork: 'View My Work'
   },
