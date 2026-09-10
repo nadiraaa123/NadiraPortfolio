@@ -327,7 +327,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     "Integrated internal databases with AP2T (Aplikasi Pelayanan Pelanggan Terpadu) to ensure seamless data synchronization and support efficient PLN operational workflows."
   ],
   "skills": ["Google Apps Script", "Cloudflare", "Google Sheets", "AP2T", "Tableau", "Data Visualization", "Dashboard Development", "Workflow Automation"]
-  }
+  },
   
   {
     id: "exp-2",
