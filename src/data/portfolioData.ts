@@ -107,7 +107,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     toolsUsed: ["Python", "Scikit-Learn", "Looker Studio", "Excel", "Google BigQuery"],
     featured: true,
-    liveUrl: "https://datastudio.google.com/reporting/2f5b0158-c6e7-4ad3-a938-ff562dab269d",
+    liveUrl: "https://youtu.be/xAGn4oqhiMc?si=Tq_2YkkT1GcNJcZE",
     githubUrl: "https://github.com/nadiraaa123/Data-Analyst-Portfolio-at-KarirNex-Bootcamp",
   },
   {
