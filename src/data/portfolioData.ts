@@ -358,7 +358,7 @@ export const EDUCATION_DATA: EducationItem[] = [
     institution: "President University",
     period: "2024 – 2027 (Expected)",
     location: "Indonesia",
-    gpa: "3.78 / 4.00",
+    gpa: "3.80 / 4.00",
     honors: "Jababeka Scholarship",
     description: "Focusing on data mining, statistical modeling, database design, software engineering, and business process analysis.",
     relevantCoursework: [
