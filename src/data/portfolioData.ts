@@ -63,14 +63,14 @@ export function getSkillCategories(_lang?: Language): TechSkillCategory[] {
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: "TalentFlow 360 - HR Recruitment Automation",
+    id: "HR Recruitment Automation",
     title: "TalentFlow 360 - HR Recruitment Automation",
     subtitle: "End-to-end recruitment workflow on Microsoft Power Platform",
     category: "Business & System Analysis",
     tags: ["Power Automate", "Dataverse", "Power Apps", "HRIT"],
     description: "Automated an internship recruitment process from online application to onboarding: intake, HR screening approval, hire-to-onboarding handover, and SLA monitoring, built entirely on free Power Platform tiers.",
     fullStory: "HR teams often track applicants in spreadsheets and email, so applications get lost, approvals stall, and nobody sees which candidates have waited too long. TalentFlow 360 replaces that with one Dataverse data model and five automated flows. A careers web page posts applications to a Power Automate HTTP flow that validates input, blocks duplicate submissions, and creates a Candidate record. Each new candidate is routed to HR through a screening approval; the decision, approver, timestamp, and comments are written back automatically. When a candidate is marked Hired, the system creates an Intern record that triggers the existing onboarding approval and generates six onboarding tasks. A scheduled SLA monitor flags candidates At Risk or Breached per stage and emails HR a digest. HR works from a model-driven HR Command Center app with pipeline views, SLA exceptions, and a recruitment dashboard. Constraints shaped the design: Microsoft Forms and package imports were disabled on the university tenant, so intake moved to a web form and every component was packaged in a Dataverse solution. Dashboard figures shown are illustrative demo data.",
-    image: "projects/talentflow-360.png",
+    image: "projects/hrit.png",
     metrics: [
       { label: "Automated Flows", value: "5" },
       { label: "Test Scenarios Passed", value: "11/11" },
