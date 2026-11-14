@@ -63,6 +63,30 @@ export function getSkillCategories(_lang?: Language): TechSkillCategory[] {
 
 export const PROJECTS_DATA: Project[] = [
   {
+    id: "TalentFlow 360 - HR Recruitment Automation",
+    title: "TalentFlow 360 - HR Recruitment Automation",
+    subtitle: "End-to-end recruitment workflow on Microsoft Power Platform",
+    category: "Business & System Analysis",
+    tags: ["Power Automate", "Dataverse", "Power Apps", "HRIT"],
+    description: "Automated an internship recruitment process from online application to onboarding: intake, HR screening approval, hire-to-onboarding handover, and SLA monitoring, built entirely on free Power Platform tiers.",
+    fullStory: "HR teams often track applicants in spreadsheets and email, so applications get lost, approvals stall, and nobody sees which candidates have waited too long. TalentFlow 360 replaces that with one Dataverse data model and five automated flows. A careers web page posts applications to a Power Automate HTTP flow that validates input, blocks duplicate submissions, and creates a Candidate record. Each new candidate is routed to HR through a screening approval; the decision, approver, timestamp, and comments are written back automatically. When a candidate is marked Hired, the system creates an Intern record that triggers the existing onboarding approval and generates six onboarding tasks. A scheduled SLA monitor flags candidates At Risk or Breached per stage and emails HR a digest. HR works from a model-driven HR Command Center app with pipeline views, SLA exceptions, and a recruitment dashboard. Constraints shaped the design: Microsoft Forms and package imports were disabled on the university tenant, so intake moved to a web form and every component was packaged in a Dataverse solution. Dashboard figures shown are illustrative demo data.",
+    image: "projects/talentflow-360.png",
+    metrics: [
+      { label: "Automated Flows", value: "5" },
+      { label: "Test Scenarios Passed", value: "11/11" },
+      { label: "Dataverse Tables", value: "3" }
+    ],
+    keyInsights: [
+      "Reliable Intake: HTTP intake flow validates input, rejects bad data (400), and prevents duplicate candidates on retries using a client-generated submission ID.",
+      "Approval Workflow: Screening approvals move candidates to Interview or Rejected and log approver, WIB timestamp, and comments to HR notes automatically.",
+      "Hire-to-Onboarding Handover: A Hired status creates and links an Intern record, reusing the existing onboarding flow to generate six onboarding tasks without modifying it.",
+      "SLA Monitoring & Error Handling: Stage SLAs (1/3/7/5 days) are evaluated every 4 hours with an HR email digest; every flow uses Try/Catch and notifies HR with a run link on failure.",
+      "ALM & Operations: All tables, flows, connection references, and the HR Command Center model-driven app are packaged in one Dataverse solution."
+    ],
+    toolsUsed: ["Power Automate", "Microsoft Dataverse", "Power Apps (Model-driven)", "Approvals", "HTML/JavaScript"],
+    featured: true,
+  },
+  {
     id: "Sales Performance Analysis using Tableau",
     title: "Sales Performance Analysis using Tableau",
     subtitle: "Interactive Sales, Profit & Quantity Analysis in Tableau",
